@@ -10,7 +10,7 @@
     objs: "{{ item.objs | default('TABLES')}}"
     privs: "{{ item.privs }}"
     type: "{{ item.type | default('table') }}"
-    target_roles: "{{ item.name }}"
+    role: "{{ item.name }}"
   become: yes
   become_user: "{{postgresql_admin_user}}"
   with_items: "{{postgresql_user_privileges}}"
