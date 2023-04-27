@@ -1,7 +1,7 @@
 # file: postgresql/tasks/users_privileges.yml
 
 - name: PostgreSQL | Update the user privileges
-  community.postgresql.postgresql_priv:
+  community.postgresql.postgresql_privs:
     login_host: "{{ item.host | default(omit) }}"
     login_user: "{{ postgresql_admin_user }}"
     state: present
