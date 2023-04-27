@@ -6,8 +6,8 @@
     login_user: "{{ postgresql_admin_user }}"
     state: present
     db: "{{ item.db }}"
-    schema: : "{{ item.schema | default('public') }}"
-    objs: "{{ item.objs | default('TABLES') }}"
+    schema: "{{ item.schema | default('public')}}"
+    objs: "{{ item.objs | default('TABLES')}}"
     privs: "{{ item.privs }}"
     type: "{{ item.type | default('table') }}"
     target_roles: "{{ item.name }}"
