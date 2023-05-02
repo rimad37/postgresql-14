@@ -11,6 +11,7 @@
     privs: "{{ item.privs }}"
     type: "{{ item.type | default('table') }}"
     role: "{{ item.name }}"
+  failed_when: no
   become: yes
   become_user: "{{postgresql_admin_user}}"
   with_items: "{{postgresql_user_privileges}}"
