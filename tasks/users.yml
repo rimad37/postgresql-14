@@ -14,7 +14,7 @@
     state: "{{ item.state | default('present') }}"
     login_user: "{{ postgresql_admin_user }}"
     role_attr_flags: "{{ item.role_attr_flags | default(omit) }}"
-  no_log: true
+#   no_log: true
   become: yes
   become_user: "{{ postgresql_admin_user }}"
   with_items: "{{ postgresql_users }}"
